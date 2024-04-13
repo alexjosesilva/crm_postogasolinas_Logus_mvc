@@ -37,6 +37,14 @@ public class ControllerUsuario {
     }
 
     /**
+     * Metodo para retornar tipo de combustivel
+     */
+    public List<TipoCombustivel> getTiposCombustivel(){
+        return tiposCombustivel;
+    }
+
+
+    /**
      * Este Metodo Incluir novo Modelo de Veiculo.
      */
     public void incluirNovoModeloVeiculo(ModeloVeiculo modeloVeiculo) {
@@ -44,10 +52,23 @@ public class ControllerUsuario {
     }
 
     /**
+     * Metodo para retornar Modelo de veiculo
+     */
+    public List<ModeloVeiculo> getModelosVeiculo(){
+        return modelosVeiculo;
+    }
+    /**
      * Este Metodo Incluir nova Bomba Combustivel
      */
     public void incluirNovaBombaCombustivel(BombaCombustivel bombaCombustivel) {
         bombasCombustivel.add(bombaCombustivel);
+    }
+
+    /**
+     * Metodo para retornar Bomba Combustivel
+     */
+    public List<BombaCombustivel> getBombasCombustivel(){
+        return bombasCombustivel;
     }
 
     /**
