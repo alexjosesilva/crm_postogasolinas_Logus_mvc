@@ -93,7 +93,7 @@ public class InterfaceUsuario {
 
         ModeloVeiculo novoModelo = new ModeloVeiculo(novoModeloNome,iconsumoEtanol,iconsumoGasolina,iconsumoDiesel);
         controllerUsuario.incluirNovoModeloVeiculo(novoModelo);
-        controllerUsuario.exibirTodosModelos();
+        controllerUsuario.exibirModelosVeiculoCSV();
 
         System.out.println("Obrigado e Volte Sempre");
 

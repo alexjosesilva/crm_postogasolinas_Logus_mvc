@@ -4,6 +4,10 @@ import model.TipoCombustivel;
 import model.ModeloVeiculo;
 import model.BombaCombustivel;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +26,9 @@ public class ControllerUsuario {
     private List<ModeloVeiculo> modelosVeiculo;
     private List<BombaCombustivel> bombasCombustivel;
     private String criterioEnfileiramento;
+
+    public String filePath = "src/main/resources/csv/";
+
     public ControllerUsuario() {
         this.tiposCombustivel = new ArrayList<>();
         this.modelosVeiculo = new ArrayList<>();
@@ -34,6 +41,7 @@ public class ControllerUsuario {
      */
     public void incluirNovoTipoCombustivel(TipoCombustivel tipoCombustivel) {
         tiposCombustivel.add(tipoCombustivel);
+        salvarTipoCombustivelCSV(tipoCombustivel);
     }
 
     /**
@@ -49,6 +57,7 @@ public class ControllerUsuario {
      */
     public void incluirNovoModeloVeiculo(ModeloVeiculo modeloVeiculo) {
         modelosVeiculo.add(modeloVeiculo);
+        salvarModelosVeiculoCSV(modeloVeiculo);
     }
 
     /**
@@ -124,4 +133,95 @@ public class ControllerUsuario {
     public String getCriterioEnfileiramento() {
         return criterioEnfileiramento;
     }
+
+    private void salvarModelosVeiculoCSV(ModeloVeiculo modeloVeiculo) {
+        try {
+            FileWriter writer = new FileWriter(filePath+"/modelos_veiculo.csv");
+            // Escreve os cabeçalhos do arquivo CSV
+            writer.append("Nome,ConsumoEtanol,ConsumoGasolina,ConsumoDiesel\n");
+
+            // Escreve os dados de cada modelo de veículo na lista
+            for (ModeloVeiculo modelo : modelosVeiculo) {
+                writer.append(modelo.getNomeModelo());
+                writer.append(",");
+                writer.append(String.valueOf(modelo.getConsumoEtanol()));
+                writer.append(",");
+                writer.append(String.valueOf(modelo.getConsumoGasolina()));
+                writer.append(",");
+                writer.append(String.valueOf(modelo.getConsumoDiesel()));
+                writer.append("\n");
+            }
+
+            writer.flush();
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void exibirModelosVeiculoCSV() {
+        try {
+            // Cria um BufferedReader para ler o arquivo CSV
+            BufferedReader reader = new BufferedReader(new FileReader(filePath+"modelos_veiculo.csv"));
+
+            // Lê a primeira linha do arquivo (cabeçalho)
+            String line = reader.readLine();
+
+            // Exibe o cabeçalho
+            System.out.println("===== Modelos de Veículo =====");
+            System.out.println(line);
+
+            // Lê e exibe as linhas restantes do arquivo (dados dos modelos de veículo)
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void salvarTipoCombustivelCSV(TipoCombustivel tipoCombustivel) {
+        try {
+            FileWriter writer = new FileWriter(filePath+"/tipo_combutivel.csv");
+            // Escreve os cabeçalhos do arquivo CSV
+            writer.append("Tipo\n");
+
+            // Escreve os dados de cada modelo de combustivel na lista
+            for (TipoCombustivel tipo : tiposCombustivel) {
+                writer.append(tipo.getNome());
+                writer.append("\n");
+            }
+
+            writer.flush();
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void exibirTiposCombustiveisCSV() {
+        try {
+            // Cria um BufferedReader para ler o arquivo CSV
+            BufferedReader reader = new BufferedReader(new FileReader(filePath+"tipo_combutivel.csv"));
+
+            // Lê a primeira linha do arquivo (cabeçalho)
+            String line = reader.readLine();
+
+            // Exibe o cabeçalho
+            System.out.println("===== Tipos de Combustivel =====");
+            System.out.println(line);
+
+            // Lê e exibe as linhas restantes do arquivo (dados dos modelos de veículo)
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
