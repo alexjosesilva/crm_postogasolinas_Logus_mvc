@@ -42,4 +42,20 @@ public class ControllerUsuario {
         }
         System.out.println("===============================");
     }
+
+    public void exibirTodosCombustiveis() {
+        System.out.println("===== Tipos de Combustiveis =====");
+        for (TipoCombustivel tipo : tiposCombustivel) {
+            System.out.println(tipo.getNome());
+        }
+        System.out.println("===============================");
+    }
+
+    public void exibirTodasBombas() {
+        System.out.println("===== Tipos as Bombas =====");
+        for (BombaCombustivel tipo : bombasCombustivel) {
+            System.out.println(tipo.getIdentificadorBomba());
+        }
+        System.out.println("===============================");
+    }
 }
