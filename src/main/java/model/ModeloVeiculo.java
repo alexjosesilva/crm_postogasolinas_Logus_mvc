@@ -1,17 +1,27 @@
 package model;
 
 public class ModeloVeiculo {
-    private String nome;
+    private String nomeModelo;
     private double consumoEtanol;
     private double consumoGasolina;
     private double consumoDiesel;
 
-    public String getNome() {
-        return nome;
+    public ModeloVeiculo(String nomeModelo, double consumoEtanol, double consumoGasolina, double consumoDiesel) {
+        this.nomeModelo = nomeModelo;
+        this.consumoEtanol = consumoEtanol;
+        this.consumoGasolina = consumoGasolina;
+        this.consumoDiesel = consumoDiesel;
+    }
+    public ModeloVeiculo(){
+
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public String getNomeModelo() {
+        return nomeModelo;
+    }
+
+    public void setNomeModelo(String nomeModelo) {
+        this.nomeModelo = nomeModelo;
     }
 
     public double getConsumoEtanol() {

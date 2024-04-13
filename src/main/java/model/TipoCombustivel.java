@@ -10,4 +10,12 @@ public class TipoCombustivel {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public TipoCombustivel(){
+
+    }
+
+    public TipoCombustivel(String nome) {
+        this.nome = nome;
+    }
 }
