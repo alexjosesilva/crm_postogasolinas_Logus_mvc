@@ -11,11 +11,12 @@ public class ControllerUsuario {
     private List<TipoCombustivel> tiposCombustivel;
     private List<ModeloVeiculo> modelosVeiculo;
     private List<BombaCombustivel> bombasCombustivel;
-
+    private String criterioEnfileiramento;
     public ControllerUsuario() {
         this.tiposCombustivel = new ArrayList<>();
         this.modelosVeiculo = new ArrayList<>();
         this.bombasCombustivel = new ArrayList<>();
+        this.criterioEnfileiramento = "FIFO";
     }
 
     public void incluirNovoTipoCombustivel(TipoCombustivel tipoCombustivel) {
@@ -57,5 +58,13 @@ public class ControllerUsuario {
             System.out.println(tipo.getIdentificadorBomba());
         }
         System.out.println("===============================");
+    }
+
+    public void mudarCriterioEnfileiramento(String criterio) {
+        criterioEnfileiramento = criterio;
+    }
+
+    public String getCriterioEnfileiramento() {
+        return criterioEnfileiramento;
     }
 }

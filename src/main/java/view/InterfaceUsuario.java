@@ -111,7 +111,13 @@ public class InterfaceUsuario {
         Scanner scanner = new Scanner(System.in);
         // Implemente aqui a lógica para mudar o critério de enfileiramento
         System.out.println("Bem vindo a Muda Enfileiramento.");
+        System.out.println("Criterio atual: "+controllerUsuario.getCriterioEnfileiramento());
 
+        System.out.print("Digite o novo critério de enfileiramento: ");
+        String criterioEnfileiramento = scanner.nextLine();
+        controllerUsuario.mudarCriterioEnfileiramento(criterioEnfileiramento);
+
+        System.out.println("Critério de enfileiramento alterado para: " + criterioEnfileiramento);
         System.out.println("Obrigado e Volte Sempre");
     }
 
