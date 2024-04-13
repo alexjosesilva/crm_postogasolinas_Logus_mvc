@@ -35,5 +35,11 @@ public class ControllerUsuario {
     }
 
     // Outros métodos necessários para operações adicionais
-
+    public void exibirTodosModelos() {
+        System.out.println("===== Modelos de Veículo =====");
+        for (ModeloVeiculo modelo : modelosVeiculo) {
+            System.out.println(modelo.getNomeModelo());
+        }
+        System.out.println("===============================");
+    }
 }

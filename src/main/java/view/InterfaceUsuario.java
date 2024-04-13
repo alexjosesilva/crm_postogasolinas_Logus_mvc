@@ -1,5 +1,6 @@
 package view;
 
+import controller.ControllerUsuario;
 import model.ModeloVeiculo;
 
 import java.util.Scanner;
@@ -61,24 +62,27 @@ public class InterfaceUsuario {
         int iconsumoDiesel = Integer.parseInt(consumoDiesel);
 
         ModeloVeiculo novoModelo = new ModeloVeiculo(novoModeloNome,iconsumoEtanol,iconsumoGasolina,iconsumoDiesel);
+        ControllerUsuario controllerUsuario = new ControllerUsuario();
+        controllerUsuario.incluirNovoModeloVeiculo(novoModelo);
+        controllerUsuario.exibirTodosModelos();
 
-        System.out.println("Modelo inserido: "+novoModelo.getNomeModelo());
         System.out.println("Obrigado e Volte Sempre");
+
     }
 
     private void incluirNovoTipoCombustivel() {
         // Implemente aqui a lógica para incluir um novo tipo de combustível
-        System.out.println("Funcionalidade de inclusão de novo tipo de combustível ainda não implementada.");
+        System.out.println("Bem vindo a inclusão de um novo Tipo de Combustivel.");
     }
 
     private void incluirNovaBombaCombustivel() {
         // Implemente aqui a lógica para incluir uma nova bomba de combustível
-        System.out.println("Funcionalidade de inclusão de nova bomba de combustível ainda não implementada.");
+        System.out.println("Bem vindo a inclusão de um nova Bomba.");
     }
 
     private void mudarCriterioEnfileiramento() {
         // Implemente aqui a lógica para mudar o critério de enfileiramento
-        System.out.println("Funcionalidade de mudança de critério de enfileiramento ainda não implementada.");
+        System.out.println("Bem vindo a Muda Enfileiramento.");
     }
 
 }
