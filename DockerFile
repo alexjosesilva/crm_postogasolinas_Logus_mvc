@@ -1,0 +1,11 @@
+# Use uma imagem base do Java
+FROM openjdk:17-jre-slim
+
+# Defina o diretório de trabalho dentro do contêiner
+WORKDIR /app
+
+# Copie os arquivos JAR e todos os arquivos necessários para o diretório de trabalho do contêiner
+COPY ./target/Logus_mvc.jar /app/Logus_mvc.jar
+
+# Comando para executar o seu aplicativo Java quando o contêiner for iniciado
+CMD ["java", "-jar", "Logus_mvc.jar"]
