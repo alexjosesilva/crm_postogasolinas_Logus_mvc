@@ -1,5 +1,12 @@
 package model;
 
+/**
+ * Essa Classe é modelo para BombaCombustivel
+ * Esta apta a ser utilizada para persistir em dados
+ * quando necessário
+ * Adicionar o serialaiser para persistir.
+ *
+ */
 public class BombaCombustivel {
     private TipoCombustivel tipoCombustivel;
     private String IdentificadorBomba;
