@@ -16,6 +16,8 @@ O software oferece as seguintes funcionalidades:
 - Java 21
 - IntelliJ IDEA
 - OpenCSV para leitura de arquivos CSV
+- Docker
+- JUnit
 
 ## Como Executar o Projeto
 
