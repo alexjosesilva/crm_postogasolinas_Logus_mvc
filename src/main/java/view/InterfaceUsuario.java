@@ -71,7 +71,7 @@ public class InterfaceUsuario {
      * Solicita ao usuário que insira o nome do modelo, consumo de etanol, consumo de gasolina e consumo de diesel.
      * Cria um novo objeto ModeloVeiculo com os dados fornecidos e o passa para o método incluirNovoModeloVeiculo() do ControllerUsuario.
      */
-    private void incluirNovoModeloVeiculo() {
+    public void incluirNovoModeloVeiculo() {
         Scanner scanner = new Scanner(System.in);
         // Implemente aqui a lógica para incluir um novo modelo de veículo
         System.out.println("Bem vindo a inclusão de um novo Modelo.");
@@ -105,7 +105,7 @@ public class InterfaceUsuario {
      * Solicita ao usuário que insira o nome do combustível.
      * Cria um novo objeto TipoCombustivel com o nome fornecido e chama o método incluirNovoTipoCombustivel() do ControllerUsuario para adicionar o novo tipo de combustível.
      */
-    private void incluirNovoTipoCombustivel() {
+    public void incluirNovoTipoCombustivel() {
         Scanner scanner = new Scanner(System.in);
         // Implemente aqui a lógica para incluir um novo tipo de combustível
         System.out.println("Bem vindo a inclusão de um novo Tipo de Combustivel.");
@@ -123,7 +123,7 @@ public class InterfaceUsuario {
      * Solicita ao usuário que insira o identificador da bomba e o nome do combustível.
      * Cria um novo objeto BombaCombustivel com os dados fornecidos e o passa para o método incluirNovaBombaCombustivel() do ControllerUsuario.
      */
-    private void incluirNovaBombaCombustivel() {
+    public void incluirNovaBombaCombustivel() {
         Scanner scanner = new Scanner(System.in);
         // Implemente aqui a lógica para incluir uma nova bomba de combustível
         System.out.println("Bem vindo a inclusão de um nova Bomba.");
@@ -145,7 +145,7 @@ public class InterfaceUsuario {
      * Permite ao usuário alterar o critério de enfileiramento atual do sistema.
      * Exibe o critério de enfileiramento atual, solicita ao usuário que insira o novo critério e chama o método mudarCriterioEnfileiramento() do ControllerUsuario para atualizar o critério de enfileiramento.
      */
-    private void mudarCriterioEnfileiramento() {
+    public void mudarCriterioEnfileiramento() {
         Scanner scanner = new Scanner(System.in);
         // Implemente aqui a lógica para mudar o critério de enfileiramento
         System.out.println("Bem vindo a Muda Enfileiramento.");
