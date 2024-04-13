@@ -1,5 +1,12 @@
 package model;
 
+/**
+ * Essa Classe é modelo para TipoCombustivel
+ * Esta apta a ser utilizada para persistir em dados
+ * quando necessário
+ * Adicionar o serialaiser para persistir.
+ *
+ */
 public class TipoCombustivel {
     private String nome;
 
