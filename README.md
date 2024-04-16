@@ -1,3 +1,7 @@
+[![Latest Version](https://img.shields.io/github/v/release/alexjosesilva/crm_postogasolinas_Logus_mvc?include_prereleases)](https://github.com/alexjosesilva/crm_postogasolinas_Logus_mvc/releases/tag/1.0)
+
+[![License](https://img.shields.io/github/license/alexjosesilva/crm_postogasolinas_Logus_mvc)]([https://github.com/alexjosesilva/crm_postogasolinas_Logus_mvc/blob/master/LICENSE](https://github.com/alexjosesilva/logus-microservice-gas-station/blob/master/LICENSE))
+
 # Projeto de Software para Gestão de Posto de Gasolina
 
 Este é um projeto de software em Java desenvolvido para gerenciar informações de modelos de veículos e tipos de combustível, utilizando a arquitetura MVC.
